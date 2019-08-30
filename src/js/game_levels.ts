@@ -509,28 +509,24 @@ export const EMOJIS_LVL_5: Array<EmojiItem> = [
 // here.
 export const EMOJIS_LVL_DEMO: Array<EmojiItem> = [
   {
-    'name': 'watch',
-    'emoji': '⌚',
-    'path': '/img/emojis/game/watch.svg'
+    'name': 'laptop',
+    'emoji': '💻',
+    'path': '/img/emojis/game/laptop.svg'
   },
   {
-    'name': 'shoe',
-    'emoji': '👞',
-    'path': '/img/emojis/game/shoe.svg'
+    'name': 'paperclip',
+    'emoji': '📎',
+    'path': '/img/emojis/game/paperclip.svg'
   },
   {
-    'name': 'banana',
-    'emoji': '🍌',
-    'path': '/img/emojis/game/banana.svg'
+    'name': 'coffeemug',
+    'emoji': '☕',
+    'path': '/img/emojis/game/coffeemug.svg'
   },
   {
-    'name': 'beer',
-    'emoji': '🍺',
-    'path': '/img/emojis/game/beer.svg'
+    'name': 'snake',
+    'emoji': '🐍',
+    'path': '/img/emojis/game/snake.svg'
   },
-  {
-    'name': 'jack o lantern',
-    'emoji': '🎃',
-    'path': '/img/emojis/game/jack o lantern.svg'
-  }
+  
 ];

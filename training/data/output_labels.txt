@@ -1,0 +1,5 @@
+coffeemug
+paperclip
+laptop
+clutter
+snake

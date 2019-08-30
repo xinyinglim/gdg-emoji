@@ -616,7 +616,7 @@ export class Game {
    */
   checkEmojiMatch(emojiNameTop1: string, emojiNameTop2: string) {
 
-    // If our top guess is different from when we last checked update the
+// If our top guess is different from when we last checked update the
     // top guess.
     if (this.topItemGuess !== emojiNameTop1) {
       this.topItemGuess = emojiNameTop1;
@@ -632,8 +632,10 @@ export class Game {
       }
     }
 
-    if (this.currentEmoji.name === emojiNameTop1 ||
-        this.currentEmoji.name === emojiNameTop2)  {
+    if (this.currentEmoji.name === emojiNameTop1
+      //  ||  //only first one
+        // this.currentEmoji.name === emojiNameTop2
+      )  {
       this.emojiFound();
     }
   }

@@ -155,6 +155,8 @@ export class Ui {
   sleuthSpeakingPrefixes: Array<string>;
   activeView: string;
   prevActiveView: string;
+  sleuthSpeakingClutter: Array<string>;
+
 
   constructor() {
     this.viewsList = {
@@ -233,6 +235,19 @@ export class Ui {
       'Did I spot a ',
       'Might I see a '
     ];
+
+    this.sleuthSpeakingClutter = [
+      "Time's ticking!",
+      "Did you try under the table?",
+      "Maybe it's behind you?",
+      "Chop chop, hurry up!",
+      "I think I see it by the plant! Just kidding",
+      "Hm, I don't see it.",
+      "You need a magnifying glass.",
+      "What about looking over there?",
+      "I bet that person has it.",
+      "Tick tock tick tock."
+    ]
 
     this.activeView = VIEWS.LANDING;
     this.prevActiveView = this.activeView;
@@ -465,11 +480,17 @@ export class Ui {
    * item seen in the real world.
    */
   get sleuthSpeakingSeeingMsg(): string {
+    console.log(game.topItemGuess)
+    if (game.topItemGuess === "clutter") {
+      let randomIndex = Math.floor(this.sleuthSpeakingClutter.length * Math.random())
+      return this.sleuthSpeakingClutter[randomIndex]
+    }
+    
     let randomIndex = Math.floor(this.sleuthSpeakingPrefixes.length *
         Math.random());
     return this.sleuthSpeakingPrefixes[randomIndex] +
            game.topItemGuess.toString() + ' ?';
-  }
+    }
 
   /**
    * Updates the timer element with the new time remaining.

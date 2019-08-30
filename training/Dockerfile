@@ -19,7 +19,7 @@ RUN git clone --depth 1 https://github.com/tensorflow/tensorflow.git --branch r1
 
 CMD python3 /tensorflow/tensorflow/examples/image_retraining/retrain.py \
         --image_dir /data/images \
-        --how_many_training_steps=4000 \
+        --how_many_training_steps=500 \
         --eval_step_interval=100 \
         --architecture mobilenet_0.25_224 \
         --output_graph /data/graph.pb \
